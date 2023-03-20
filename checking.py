@@ -3,7 +3,7 @@ import datetime
 import subprocess
 import pandas as pd
 
-df = pd.read_csv('./data_card.csv')
+df = pd.read_csv('./data/data.csv')
 
 def write_csv(card_id):
     index = df.index[(df['UID'] == card_id)]
@@ -14,7 +14,7 @@ def write_csv(card_id):
     current_date = datetime.datetime.now().strftime("%Y-%m-%d")
 
     # 추출한 카드 ID와 현재 시간, 날짜를 .csv 파일에 추가합니다.
-    with open('card_data_'+current_date+'.csv', mode='a', newline='') as csv_file:
+    with open('./data/card_data_'+current_date+'.csv', mode='a', newline='') as csv_file:
         fieldnames = ['Student ID', 'UID', 'Time', 'Date']
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 
