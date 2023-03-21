@@ -8,6 +8,7 @@ df = pd.read_csv('./data/data.csv')
 def write_csv(card_id):
     index = df.index[(df['UID'] == card_id)]
     student_id = df['Student ID'].values[index][0]
+    student_name = df['Name'].values[index][0]
 
     # 현재 시간과 날짜를 구합니다.
     current_time = datetime.datetime.now().strftime("%H:%M:%S")
@@ -20,7 +21,7 @@ def write_csv(card_id):
 
         writer.writerow({'Student ID': student_id, 'UID': card_id, 'Time': current_time, 'Date': current_date})
 
-    print("\n", student_id, current_time,"checked!")    
+    print("\n", student_name, student_id, current_time,"checked!")    
     #print('Student ID: ',student_id, 'Card ID:', card_id, 'Time:', current_time, 'Date:', current_date)
 
 def read_card():
