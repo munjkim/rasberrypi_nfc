@@ -18,7 +18,7 @@ while True:
     
     student_id = input("Student id : ")
     # 추출한 카드 ID와 현재 시간, 날짜를 .csv 파일에 추가합니다.
-    with open('data_card.csv', mode='a', newline='') as csv_file:
+    with open('reading.csv', mode='a', newline='') as csv_file:
         fieldnames = ['Student ID', 'ID', 'Time', 'Date']
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 
