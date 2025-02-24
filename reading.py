@@ -17,6 +17,7 @@ while True:
     print("Read end")
     
     student_id = input("Student id : ")
+
     # 추출한 카드 ID와 현재 시간, 날짜를 .csv 파일에 추가합니다.
     with open('./data/reading.csv', mode='a', newline='') as csv_file:
         fieldnames = ['Student ID', 'ID', 'Time', 'Date']
