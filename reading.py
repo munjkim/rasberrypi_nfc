@@ -25,4 +25,4 @@ while True:
 
         writer.writerow({'Student ID': student_id, 'ID': card_id, 'Time': current_time, 'Date': current_date})
         
-    print('Student ID: ',student_id, 'Card ID:', card_id, 'Time:', current_time, 'Date:', current_date)
+    print('Student ID: ',student_id, 'Card ID:', card_id, 'Time:', current_time, 'Date:', current_date, '\n')
